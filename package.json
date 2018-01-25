@@ -1,0 +1,29 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "bAmazon Online Store ",
+  "main": "bAmazonCustomer.js",
+  "scripts": {
+    "test": "node bAmazonCustomer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boyrajat/bAmazon.git"
+  },
+  "keywords": [
+    "bamazon",
+    "bAmazon"
+  ],
+  "author": "Raj Narula",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boyrajat/bAmazon/issues"
+  },
+  "homepage": "https://github.com/boyrajat/bAmazon#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "inquirer": "^5.0.1",
+    "mysql": "github:mysqljs/mysql",
+    "sql": "^0.78.0"
+  }
+}
