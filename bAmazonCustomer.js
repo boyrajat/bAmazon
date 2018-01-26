@@ -94,10 +94,15 @@ function purchase(item,quantity) {
 			console.log("SORRY, WE ONLY HAVE " + res[0].stock_quantity + " of " + res[0].product_name + " available..");
 			connection.end();
 		} else {
+		var updQuantity = res[0].stock_quantity - quantity;
 		var totalPrice = quantity * res[0].price;
-		console.log("\n\nYOUR TOTAL FOR THIS PURCHASE IS -> $" + totalPrice + "\nTHANK YOU FOR SHOPPING AT BAMAZON.COM\n\n");
-		connection.end();
-	}
-	})
+		connection.query("UPDATE products SET stock_quantity=" + updQuantity + " WHERE item_id=" + item, function(err, res) {
+			if (err) throw err;
 
+		console.log("\n\nYOUR TOTAL FOR THIS PURCHASE IS -> $" + totalPrice + "\nTHANK YOU FOR SHOPPING AT BAMAZON.COM\n\n" + "WE HAVE UPDATED OUR STOCK. THANK YOU COME AGAIN...\n\n");
+		connection.end();
+	});
+	}
+	});
 }
+
