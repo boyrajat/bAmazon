@@ -24,7 +24,7 @@ function displayGoods() {
 		if(err) throw err;
 
 		var table = new Table({
-			head: ['ITEMS', 'ITEM ID', 'PRODUCT NAME', 'DEPARTMENT', 'PRICE', 'QUANTITY'],
+			head: ['ITEMS', 'ITEM ID', 'PRODUCT NAME', 'DEPARTMENT', 'PRICE', 'QUANTITY']
 		});
 
 		for (var i=0; i<res.length; i++) {
